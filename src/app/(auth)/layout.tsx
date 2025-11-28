@@ -1,0 +1,15 @@
+const layout = ({
+  children
+}: {
+  children: React.ReactNode
+}) => {
+  return (
+    <main className="p-4 xl:p-7 min-h-screen flex">
+      <div className="rounded-4xl bg-[url('/images/bg-auth.svg')] bg-cover bg-center bg-no-repeat flex-1 flex-center p-4">
+        {children}
+      </div>
+    </main>
+  )
+}
+
+export default layout
