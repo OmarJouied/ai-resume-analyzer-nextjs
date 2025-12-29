@@ -79,8 +79,20 @@
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 
-  --gray-600: oklch(44.224% 0.03552 257.813);
-  --gray-900: oklch(27.76% 0.03418 255.832);
+  --color-gray-600: oklch(44.224% 0.03552 257.813);
+  --color-gray-900: oklch(27.76% 0.03418 255.832);
+
+  --color-green-400: oklch(52.234% 0.12321 142.659);
+  --color-green-600: oklch(51.576% 0.0656 187.122);
+  --color-green-900: oklch(51.576% 0.0656 187.122);
+
+  --color-yellow-400: oklch(83.352% 0.10032 69.577);
+  --color-yellow-600: oklch(74.687% 0.17004 62.1);
+  --color-yellow-900: oklch(63.492% 0.16378 42.785);
+
+  --color-red-400: oklch(71.863% 0.15075 23.933);
+  --color-red-600: oklch(62.373% 0.17518 25.934);
+  --color-red-900: oklch(50.513% 0.17999 28.181);
 }
 
 .dark {
@@ -125,6 +137,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  h1 {
+    @apply text-gradiant w-fit text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-8xl;
+  }
 }
 
 @utility flex-center {
@@ -132,5 +148,5 @@
 }
 
 @utility text-gradiant {
-  @apply bg-linear-to-r bg-clip-text text-transparent from-secondary via-black to-primary;
+  @apply bg-linear-to-r bg-clip-text text-transparent from-secondary/30 via-black to-primary/30;
 }

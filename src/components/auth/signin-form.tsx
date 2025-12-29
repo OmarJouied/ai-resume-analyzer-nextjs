@@ -1,7 +1,7 @@
 "use client";
 
 import { loginAction } from "@/actions/auth";
-import AuthForm from "./ui/auth-form";
+import AuthForm from "../ui/auth-form";
 
 const SigninForm = () => {
   return (
