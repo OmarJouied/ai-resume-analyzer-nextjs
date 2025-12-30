@@ -2,6 +2,12 @@ import { NextRequest, NextResponse } from "next/server";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
+/**
+ * Redirects unauthenticated requests to the sign-in page or allows the request to continue.
+ *
+ * @param request - The incoming NextRequest; used to derive the original URL for redirection.
+ * @returns A NextResponse that redirects to `/sign-in` when no session exists, or a response that continues processing otherwise.
+ */
 export async function proxy(request: NextRequest) {
   const session = await auth.api.getSession({
     headers: await headers()
