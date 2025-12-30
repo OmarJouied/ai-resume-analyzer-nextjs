@@ -4,8 +4,9 @@ import { prismaAdapter } from "better-auth/adapters/prisma";
 // // If your Prisma file is located elsewhere, you can change the path
 import { PrismaClient } from "@/generated/prisma/client";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { env } from "./env";
 
-const connectionString = process.env.DATABASE_URL;
+const { DATABASE_URL: connectionString } = env;
 
 const adapter = new PrismaPg({ connectionString });
 const prisma = new PrismaClient({ adapter });
