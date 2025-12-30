@@ -18,7 +18,7 @@ const Navbar = async () => {
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
-        <UserMenu username={user.name} />
+        <UserMenu username={user.name ?? "User"} />
       </div>
     </header>
   )
