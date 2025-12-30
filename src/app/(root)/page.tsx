@@ -1,3 +1,13 @@
+/**
+ * Renders the home page layout for tracking applications and resume ratings.
+ *
+ * The component outputs a full-screen, centered container with responsive
+ * padding and light/dark background styles. It includes a main content area
+ * constrained to a maximum width and an <h1> heading that displays
+ * "Track Your Applications" and "Resume Ratings".
+ *
+ * @returns A React element containing the page layout and heading.
+ */
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">

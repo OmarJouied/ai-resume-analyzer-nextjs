@@ -36,6 +36,12 @@ const buttonVariants = cva(
   }
 )
 
+/**
+ * Render a themable button element that applies variant and size styles and can render as a Slot-wrapped child.
+ *
+ * @param asChild - When `true`, render the component as a `Slot` so the caller's element receives the button props; otherwise render a native `button`.
+ * @returns The rendered button element (or the caller's element when `asChild` is `true`) with computed variant and size classes and forwarded props.
+ */
 function Button({
   className,
   variant,
